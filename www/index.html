@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Content-Security-Policy allow *anything* (added policy to stop warnings) -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>BLE Background Test</title>
+    </head>
+    <body>
+        <div>
+            <h2>BLE Background</h2>
+            <div id="mainPage">
+                <p>
+                This app scans for peripherals running the Count service 0x1234
+                and automatically connects to the first device that is discovered.
+                </p><p>
+                The app will scan and connect to a peripheral while it is the background.
+                </p>
+                <button id="scanButton">Scan Again</button>
+            </div>
+            <div id="detailPage">
+                <div id="countDiv">&nbsp;</div>
+                <div id="deviceIdDiv"></div>
+                <pre>
+                </pre>
+                <button id="disconnectButton">Disconnect</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
